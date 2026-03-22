@@ -5,7 +5,7 @@ import pandas as pd
 from tqdm import tqdm
 import cv2
 
-# ===== PATHS =====
+#PATHS
 BASE_PATH = "yolo_pipeline/data/raw/occlusion-dataset"
 PROCESSED_PATH = "yolo_pipeline/data/processed"
 
@@ -13,7 +13,7 @@ SAMPLES_PATH = os.path.join(BASE_PATH, "samples")
 LABELS_PATH = os.path.join(BASE_PATH, "labels")
 SPLITS_PATH = os.path.join(BASE_PATH, "splits")
 
-# ===== SETTINGS =====
+#SETTINGS
 CAMERA_KEYWORD = "front"   # change later for multi-view
 CLASS_MAP = {
     "car": 0,
@@ -147,7 +147,7 @@ def main():
     process_split("val")
     create_yaml()
 
-    print("\n✅ Conversion complete!")
+    print("\n Conversion complete!")
 
 
 if __name__ == "__main__":
