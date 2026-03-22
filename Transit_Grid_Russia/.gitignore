@@ -1,0 +1,31 @@
+# Data (VERY LARGE)
+yolo_pipeline/data/raw/
+yolo_pipeline/data/processed/
+
+# Outputs
+yolo_pipeline/outputs/
+yolo_pipeline/runs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Models
+*.pt
+*.pth
