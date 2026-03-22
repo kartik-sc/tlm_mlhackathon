@@ -1,6 +1,6 @@
 import lightgbm as lgb
 
-def train_lgb(X_tr, y_tr, X_val, y_val, w_val, params):
+def train_lgb(X_tr, y_tr, w_tr, X_val, y_val, w_val, params):
   train_data = lgb.Dataset(X_tr, label=y_tr, weight=w_tr)
   val_data = lgb.Dataset(X_val, label=y_val, weight=w_val)
 

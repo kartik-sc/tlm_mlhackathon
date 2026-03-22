@@ -1,8 +1,8 @@
 import numpy as np
 from sklearn.model_selection import StratifiedKFold
-from utils import weighted_auc
-from model import train_lgb
-from config import N_FOLDS, TARGET, WEIGHT, SEED
+from src.utils import weighted_auc
+from src.model import train_lgb
+from src.config import N_FOLDS, TARGET, WEIGHT, SEED
 
 
 def run_training(train, test, features, params):
@@ -35,6 +35,6 @@ def run_training(train, test, features, params):
         print(f"Fold {fold+1} AUC: {fold_score}")
 
     final_score = weighted_auc(y, oof_preds, w)
-    print(f"\n🔥 FINAL CV AUC: {final_score}")
+    print(f"\nFINAL CV AUC: {final_score}")
 
     return test_preds, final_score

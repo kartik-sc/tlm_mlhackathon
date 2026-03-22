@@ -1,6 +1,6 @@
-from data_loader import load_data, get_features
-from trainer import run_training
-from config import LGB_PARAMS, ID_COL
+from src.data_loader import load_data, get_features
+from src.train import run_training
+from src.config import LGBM_PARAMS, ID_COL
 import pandas as pd
 import os
 
@@ -10,8 +10,7 @@ def main():
     train, test = load_data()
     features = get_features(train)
 
-    test_preds, score = run_training(train, test, features, LGB_PARAMS)
-
+    test_preds, score = run_training(train, test, features, LGBM_PARAMS)
     submission = pd.DataFrame({
         ID_COL: test[ID_COL],
         "label": test_preds
