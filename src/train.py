@@ -4,13 +4,12 @@ from src.utils import weighted_auc
 from src.model import train_lgb
 from src.config import N_FOLDS, TARGET, WEIGHT, SEED
 
+def run_training(train_df, test_df, features, params, id_col=None):
+    X = train_df[features]
+    y = train_df[TARGET]
+    w = train_df[WEIGHT]
 
-def run_training(train, test, features, params):
-    X = train[features]
-    y = train[TARGET]
-    w = train[WEIGHT]
-
-    X_test = test[features]
+    X_test = test_df[features]
 
     skf = StratifiedKFold(n_splits=N_FOLDS, shuffle=True, random_state=SEED)
 
@@ -37,4 +36,4 @@ def run_training(train, test, features, params):
     final_score = weighted_auc(y, oof_preds, w)
     print(f"\nFINAL CV AUC: {final_score}")
 
-    return test_preds, final_score
+    return oof_preds, test_preds, final_score
