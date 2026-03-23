@@ -1,0 +1,8 @@
+path: C:\Users\kartik\tlm_\Transit_Grid_Russia\yolo_pipeline\data\processed
+train: images/train
+val: images/val
+
+names:
+  0: car
+  1: pedestrian
+  2: cyclist
