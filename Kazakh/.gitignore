@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+.env/
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+data/raw/
+data/processed/
+
+# Logs
+logs/
+*.log
+
+# Models
+models/
+checkpoints/
+
+# Outputs
+outputs/
+*.csv
+*.json
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary
+*.tmp
+*.bak
